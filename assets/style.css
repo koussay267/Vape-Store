@@ -1,0 +1,153 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgba(227, 225, 225, 0.677);
+}
+
+/* Header: Flexbox layout with space between for larger screens */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Aligns items vertically */
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Links: Flex layout and padding for larger screens */
+a {
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Navigation: Flexbox layout for larger screens */
+.navvv {
+    display: flex;
+    justify-content: space-around;
+    width: max-content;
+}
+
+/* Search input: Set a default width for larger screens */
+.form-control {
+    width: 100%;
+}
+
+.carousel .slide{
+    width: 100%;
+}
+
+.carousel {
+    max-height: 450px; /* Adjust the height as needed */
+}
+
+.carousel-inner img {
+    height: 450px; /* Matches the carousel height */
+}
+
+/* Media query for smaller screens (optional) */
+@media (max-width: 768px) {
+    /* Further reduce carousel height for smaller screens */
+    .carousel {
+        max-height: 300px;
+    }
+
+    .carousel-inner img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further reduce carousel height for very small screens */
+    .carousel {
+        max-height: 250px;
+    }
+
+    .carousel-inner img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    a {
+        font-size: 18px;
+        padding-left: 10px;
+        padding-right: 10px;
+        flex-direction: row;
+    }
+
+    .form-control {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+        flex-direction: row;
+    }
+
+    /* Search input takes more space on very small screens */
+    .form-control {
+        width: 100%;
+    }
+}
+
+.card11 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers cards in the container */
+    flex-wrap: wrap; /* Ensures cards wrap to the next line if necessary */
+    width: 80%; /* Set a specific width for the container */
+    margin: 50px auto; /* Centers the container itself */
+    gap: 30px; /* Space between cards */
+}
+
+.btn.btn-primary {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+}
+
+.card {
+    flex: 0 1 calc(33.333% - 20px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 25px;
+}
+.card-img-top {
+    height: 200px; /* Set the desired height */
+    object-fit: contain; /* Ensure the image covers the area while maintaining aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.card-img-top:hover {
+    transform: scale(1.2); /* Scale the image to 130% of its original size */
+    overflow: hidden; /* Ensure the image stays within the card */
+    cursor: pointer;
+    
+
+}
+
+.card-title {
+    font-size: 1rem; /* Adjust the font size as needed */
+}
+.card-text {
+    font-size: 0.875rem; /* Adjust the font size as needed */
+}.card-title {
+            font-size: 1rem; /* Adjust the font size as needed */
+        }
+.card-text {
+            font-size: 0.875rem; /* Adjust the font size as needed */
+}
